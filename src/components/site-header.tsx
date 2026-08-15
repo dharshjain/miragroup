@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const businessLinks = [
   { to: "/businesses/water", label: "Water Solutions", index: "01" },
@@ -21,9 +21,40 @@ const navLinks = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    let prevScrollPos = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+
+      if (currentScrollPos <= 20) {
+        setVisible(true);
+      } else {
+        const diff = currentScrollPos - prevScrollPos;
+        if (diff > 10) {
+          setVisible(false);
+        } else if (diff < -10) {
+          setVisible(true);
+        }
+      }
+
+      prevScrollPos = currentScrollPos;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const showHeader = visible || open;
 
   return (
-    <header className="sticky top-0 z-50 bg-ink text-ink-foreground">
+    <header
+      className={`sticky top-0 z-50 bg-ink text-ink-foreground transition-transform duration-300 ease-in-out ${
+        showHeader ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="shell flex h-20 items-center justify-between gap-8">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img src="/mira-logo.png" alt="Mira Group" className="h-11 w-11 object-contain" />
