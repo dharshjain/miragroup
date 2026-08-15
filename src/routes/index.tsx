@@ -251,6 +251,59 @@ function Home() {
         </div>
       </section>
 
+      {/* INDUSTRIES WE SERVE */}
+      <section className="border-b border-border bg-card/40">
+        <div className="shell py-24 lg:py-32">
+          <Reveal>
+            <p className="label-tech text-primary">Industries We Serve</p>
+            <h2 className="display-lg mt-6 max-w-3xl">Supporting Diverse Industrial Requirements</h2>
+            <p className="mt-4 max-w-2xl text-muted-foreground">
+              Our diversified capabilities enable us to support customers across multiple key sectors with tailored solutions.
+            </p>
+          </Reveal>
+          <div className="mt-16 grid gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                num: "01",
+                title: "Chemicals & Petrochemicals",
+                desc: "Specialized tanker transportation and industrial logistics for liquid acids and chemical cargo.",
+              },
+              {
+                num: "02",
+                title: "Ports & Logistics",
+                desc: "Cargo movement and heavy vehicle support around major port-linked industrial areas like Kandla and Mundra.",
+              },
+              {
+                num: "03",
+                title: "Food & Edible Products",
+                desc: "Edible oil transportation and food-grade salt solutions with strict hygiene standards.",
+              },
+              {
+                num: "04",
+                title: "Salt & Minerals",
+                desc: "Raw and industrial salt supply and heavy equipment support from our Kutch-based operations.",
+              },
+              {
+                num: "05",
+                title: "Manufacturing Industries",
+                desc: "Industrial transportation, purified water supply (RO/DM/Distilled), and liquid cargo solutions.",
+              },
+              {
+                num: "06",
+                title: "Infrastructure & Projects",
+                desc: "Heavy vehicles, loaders, JCB earthmovers, forklifts, and site transportation support.",
+              },
+            ].map((ind, i) => (
+              <Reveal key={ind.title} delay={i * 0.06} className="border-t border-border pt-6">
+                <span className="label-tech text-primary">{ind.num}</span>
+                <h3 className="mt-3 font-display text-xl">{ind.title}</h3>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{ind.desc}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* APPROACH */}
       <section className="relative isolate overflow-hidden">
         <RevealImage

@@ -61,6 +61,39 @@ function BusinessesIndex() {
         ))}
       </section>
 
+      {/* MIRA LOGISTICS INTEGRATED SECTION */}
+      <section className="border-t border-border bg-card/60">
+        <div className="shell grid gap-12 py-20 lg:grid-cols-12 lg:py-28">
+          <Reveal className="lg:col-span-5">
+            <span className="label-tech text-primary">Mira Logistics</span>
+            <h2 className="display-lg mt-6">Industrial Transportation & Logistics</h2>
+            <p className="mt-4 font-display text-xl text-foreground/80">Moving Cargo With Precision & Reliability</p>
+            <p className="mt-6 text-muted-foreground leading-relaxed">
+              Mira Logistics provides transportation solutions for industrial and commercial cargo, with particular experience in liquid cargo and specialized transportation requirements. Operating a fleet of more than 85 own trailers and tankers across local and Pan-India routes.
+            </p>
+          </Reveal>
+          <div className="lg:col-span-6 lg:col-start-7">
+            <Reveal delay={0.1}>
+              <p className="label-tech text-primary border-t border-border pt-4">Core Logistics Capabilities</p>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {[
+                  "Industrial Transportation",
+                  "Chemical Transportation",
+                  "Liquid Cargo Transportation",
+                  "ISO Tank Movement",
+                  "Local Transportation (Kutch Hub)",
+                  "Pan-India Transportation Reach",
+                ].map((cap) => (
+                  <div key={cap} className="border border-border p-4 bg-background">
+                    <p className="font-display text-base text-foreground font-medium">{cap}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-ink text-ink-foreground">
         <div className="shell grid gap-10 py-24 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">

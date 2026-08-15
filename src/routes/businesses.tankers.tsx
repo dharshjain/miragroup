@@ -62,6 +62,18 @@ function TankerPage() {
             t: "SS Tankers",
             d: "Stainless Steel (SS) tankers are designed for liquid cargo applications where greater corrosion resistance, hygiene and product compatibility are required. Their stainless-steel construction makes them suitable for selected chemicals, food-grade liquids and other sensitive liquid products, depending on the specific cargo and grade of stainless steel required.",
           },
+          {
+            t: "Rubber-Lined / Coated Tankers",
+            d: "Specialized tankers equipped with rubber lining or protective chemical coatings engineered specifically for highly reactive acids and aggressive liquid chemicals, ensuring vessel longevity and zero cargo contamination.",
+          },
+          {
+            t: "Specialized ACN Tankers",
+            d: "Purpose-built Acrylonitrile (ACN) tankers engineered to stringent temperature, pressure, and safety specifications required for hazardous organic compounds and specialized industrial chemical movement.",
+          },
+          {
+            t: "ISO Tank Transportation",
+            d: "Intermodal ISO container tank transport solutions enabling seamless, compliant movement of liquid chemical cargo across road, rail, and port logistics channels nationwide.",
+          },
         ]}
       />
 

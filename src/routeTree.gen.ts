@@ -12,6 +12,16 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as BusinessesRouteImport } from './routes/businesses'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as InfrastructureRouteImport } from './routes/infrastructure'
+import { Route as QualitySafetyRouteImport } from './routes/quality-safety'
+import { Route as BusinessesIndexRouteImport } from './routes/businesses.index'
+import { Route as BusinessesHeavyVehiclesRouteImport } from './routes/businesses.heavy-vehicles'
+import { Route as BusinessesOilRouteImport } from './routes/businesses.oil'
+import { Route as BusinessesSaltRouteImport } from './routes/businesses.salt'
+import { Route as BusinessesTankersRouteImport } from './routes/businesses.tankers'
+import { Route as BusinessesWaterRouteImport } from './routes/businesses.water'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -28,35 +38,157 @@ const BusinessesRoute = BusinessesRouteImport.update({
   path: '/businesses',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InfrastructureRoute = InfrastructureRouteImport.update({
+  id: '/infrastructure',
+  path: '/infrastructure',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QualitySafetyRoute = QualitySafetyRouteImport.update({
+  id: '/quality-safety',
+  path: '/quality-safety',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BusinessesIndexRoute = BusinessesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BusinessesRoute,
+} as any)
+const BusinessesHeavyVehiclesRoute = BusinessesHeavyVehiclesRouteImport.update({
+  id: '/heavy-vehicles',
+  path: '/heavy-vehicles',
+  getParentRoute: () => BusinessesRoute,
+} as any)
+const BusinessesOilRoute = BusinessesOilRouteImport.update({
+  id: '/oil',
+  path: '/oil',
+  getParentRoute: () => BusinessesRoute,
+} as any)
+const BusinessesSaltRoute = BusinessesSaltRouteImport.update({
+  id: '/salt',
+  path: '/salt',
+  getParentRoute: () => BusinessesRoute,
+} as any)
+const BusinessesTankersRoute = BusinessesTankersRouteImport.update({
+  id: '/tankers',
+  path: '/tankers',
+  getParentRoute: () => BusinessesRoute,
+} as any)
+const BusinessesWaterRoute = BusinessesWaterRouteImport.update({
+  id: '/water',
+  path: '/water',
+  getParentRoute: () => BusinessesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/businesses': typeof BusinessesRoute
+  '/businesses': typeof BusinessesRouteWithChildren
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/infrastructure': typeof InfrastructureRoute
+  '/quality-safety': typeof QualitySafetyRoute
+  '/businesses/heavy-vehicles': typeof BusinessesHeavyVehiclesRoute
+  '/businesses/oil': typeof BusinessesOilRoute
+  '/businesses/salt': typeof BusinessesSaltRoute
+  '/businesses/tankers': typeof BusinessesTankersRoute
+  '/businesses/water': typeof BusinessesWaterRoute
+  '/businesses/': typeof BusinessesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/businesses': typeof BusinessesRoute
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/infrastructure': typeof InfrastructureRoute
+  '/quality-safety': typeof QualitySafetyRoute
+  '/businesses/heavy-vehicles': typeof BusinessesHeavyVehiclesRoute
+  '/businesses/oil': typeof BusinessesOilRoute
+  '/businesses/salt': typeof BusinessesSaltRoute
+  '/businesses/tankers': typeof BusinessesTankersRoute
+  '/businesses/water': typeof BusinessesWaterRoute
+  '/businesses': typeof BusinessesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/businesses': typeof BusinessesRoute
+  '/businesses': typeof BusinessesRouteWithChildren
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/infrastructure': typeof InfrastructureRoute
+  '/quality-safety': typeof QualitySafetyRoute
+  '/businesses/heavy-vehicles': typeof BusinessesHeavyVehiclesRoute
+  '/businesses/oil': typeof BusinessesOilRoute
+  '/businesses/salt': typeof BusinessesSaltRoute
+  '/businesses/tankers': typeof BusinessesTankersRoute
+  '/businesses/water': typeof BusinessesWaterRoute
+  '/businesses/': typeof BusinessesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/businesses'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/businesses'
+    | '/contact'
+    | '/gallery'
+    | '/infrastructure'
+    | '/quality-safety'
+    | '/businesses/heavy-vehicles'
+    | '/businesses/oil'
+    | '/businesses/salt'
+    | '/businesses/tankers'
+    | '/businesses/water'
+    | '/businesses/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/businesses'
-  id: '__root__' | '/' | '/about' | '/businesses'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/gallery'
+    | '/infrastructure'
+    | '/quality-safety'
+    | '/businesses/heavy-vehicles'
+    | '/businesses/oil'
+    | '/businesses/salt'
+    | '/businesses/tankers'
+    | '/businesses/water'
+    | '/businesses'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/businesses'
+    | '/contact'
+    | '/gallery'
+    | '/infrastructure'
+    | '/quality-safety'
+    | '/businesses/heavy-vehicles'
+    | '/businesses/oil'
+    | '/businesses/salt'
+    | '/businesses/tankers'
+    | '/businesses/water'
+    | '/businesses/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  BusinessesRoute: typeof BusinessesRoute
+  BusinessesRoute: typeof BusinessesRouteWithChildren
+  ContactRoute: typeof ContactRoute
+  GalleryRoute: typeof GalleryRoute
+  InfrastructureRoute: typeof InfrastructureRoute
+  QualitySafetyRoute: typeof QualitySafetyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -82,13 +214,109 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BusinessesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/infrastructure': {
+      id: '/infrastructure'
+      path: '/infrastructure'
+      fullPath: '/infrastructure'
+      preLoaderRoute: typeof InfrastructureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quality-safety': {
+      id: '/quality-safety'
+      path: '/quality-safety'
+      fullPath: '/quality-safety'
+      preLoaderRoute: typeof QualitySafetyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/businesses/': {
+      id: '/businesses/'
+      path: '/'
+      fullPath: '/businesses/'
+      preLoaderRoute: typeof BusinessesIndexRouteImport
+      parentRoute: typeof BusinessesRoute
+    }
+    '/businesses/heavy-vehicles': {
+      id: '/businesses/heavy-vehicles'
+      path: '/heavy-vehicles'
+      fullPath: '/businesses/heavy-vehicles'
+      preLoaderRoute: typeof BusinessesHeavyVehiclesRouteImport
+      parentRoute: typeof BusinessesRoute
+    }
+    '/businesses/oil': {
+      id: '/businesses/oil'
+      path: '/oil'
+      fullPath: '/businesses/oil'
+      preLoaderRoute: typeof BusinessesOilRouteImport
+      parentRoute: typeof BusinessesRoute
+    }
+    '/businesses/salt': {
+      id: '/businesses/salt'
+      path: '/salt'
+      fullPath: '/businesses/salt'
+      preLoaderRoute: typeof BusinessesSaltRouteImport
+      parentRoute: typeof BusinessesRoute
+    }
+    '/businesses/tankers': {
+      id: '/businesses/tankers'
+      path: '/tankers'
+      fullPath: '/businesses/tankers'
+      preLoaderRoute: typeof BusinessesTankersRouteImport
+      parentRoute: typeof BusinessesRoute
+    }
+    '/businesses/water': {
+      id: '/businesses/water'
+      path: '/water'
+      fullPath: '/businesses/water'
+      preLoaderRoute: typeof BusinessesWaterRouteImport
+      parentRoute: typeof BusinessesRoute
+    }
   }
 }
+
+interface BusinessesRouteChildren {
+  BusinessesHeavyVehiclesRoute: typeof BusinessesHeavyVehiclesRoute
+  BusinessesOilRoute: typeof BusinessesOilRoute
+  BusinessesSaltRoute: typeof BusinessesSaltRoute
+  BusinessesTankersRoute: typeof BusinessesTankersRoute
+  BusinessesWaterRoute: typeof BusinessesWaterRoute
+  BusinessesIndexRoute: typeof BusinessesIndexRoute
+}
+
+const BusinessesRouteChildren: BusinessesRouteChildren = {
+  BusinessesHeavyVehiclesRoute: BusinessesHeavyVehiclesRoute,
+  BusinessesOilRoute: BusinessesOilRoute,
+  BusinessesSaltRoute: BusinessesSaltRoute,
+  BusinessesTankersRoute: BusinessesTankersRoute,
+  BusinessesWaterRoute: BusinessesWaterRoute,
+  BusinessesIndexRoute: BusinessesIndexRoute,
+}
+
+const BusinessesRouteWithChildren = BusinessesRoute._addFileChildren(
+  BusinessesRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  BusinessesRoute: BusinessesRoute,
+  BusinessesRoute: BusinessesRouteWithChildren,
+  ContactRoute: ContactRoute,
+  GalleryRoute: GalleryRoute,
+  InfrastructureRoute: InfrastructureRoute,
+  QualitySafetyRoute: QualitySafetyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

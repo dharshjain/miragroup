@@ -144,6 +144,43 @@ function About() {
           </Reveal>
         </div>
       </section>
+
+      <section className="border-b border-border">
+        <div className="shell grid gap-12 py-24 lg:grid-cols-12 lg:py-32">
+          <Reveal className="lg:col-span-4">
+            <p className="label-tech text-primary">Why Partner with Mira?</p>
+            <h2 className="display-lg mt-8">More Than a Service Provider</h2>
+            <p className="mt-6 text-muted-foreground">
+              When you work with Mira Group, you gain access to a combination of industry experience, infrastructure and operational capabilities.
+            </p>
+          </Reveal>
+          <div className="grid gap-x-12 gap-y-10 lg:col-span-7 lg:col-start-6 lg:grid-cols-2">
+            {[
+              {
+                t: "One Group. Multiple Solutions.",
+                d: "Instead of coordinating multiple vendors for different requirements, customers can access several industrial support services through one experienced business group.",
+              },
+              {
+                t: "Local Expertise. Wider Reach.",
+                d: "With a strong base in Kutch and transportation capabilities extending across India, Mira understands the operational requirements of the region while supporting wider destinations.",
+              },
+              {
+                t: "Experience That Matters.",
+                d: "Years of experience across transportation, water, salt and industrial services have helped us understand the importance of reliability, safety and consistency.",
+              },
+              {
+                t: "Relationships That Last.",
+                d: "Our objective is to create long-term partnerships through dependable service and transparent business practices.",
+              },
+            ].map((p, i) => (
+              <Reveal key={p.t} delay={i * 0.08} className="border-t border-border pt-5">
+                <h3 className="font-display text-xl">{p.t}</h3>
+                <p className="mt-3 text-muted-foreground">{p.d}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }
