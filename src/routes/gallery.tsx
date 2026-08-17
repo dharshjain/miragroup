@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
+import { useHeaderVisible } from "@/hooks/use-header-visible";
 import { PageIntro } from "@/components/page-intro";
 import { Reveal, RevealImage } from "@/components/motion-primitives";
 import hero from "@/assets/hero-fleet.jpg";
@@ -111,6 +112,7 @@ const categories = [
 function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
   const [activeImage, setActiveImage] = useState<GalleryItem | null>(null);
+  const headerVisible = useHeaderVisible();
 
   const filteredItems = activeCategory === "All" 
     ? galleryData 
@@ -131,7 +133,11 @@ function GalleryPage() {
       </PageIntro>
 
       {/* Category Navigation Bar */}
-      <section className="sticky top-20 z-40 border-y border-border bg-background/95 backdrop-blur-md">
+      <section
+        className={`sticky z-40 border-y border-border bg-background transition-all duration-300 ease-in-out ${
+          headerVisible ? "top-20" : "top-0"
+        }`}
+      >
         <div className="shell flex items-center overflow-x-auto py-4 scrollbar-none gap-3 sm:gap-6">
           {categories.map((cat) => (
             <button
