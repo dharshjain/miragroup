@@ -169,20 +169,11 @@ function GalleryPage() {
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="h-full w-full object-cover grayscale-[0.35] transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+                      className="h-full w-full object-cover grayscale-[0.2] transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
                     />
                     <div className="absolute top-4 left-4 border border-ink-border bg-ink/80 px-3 py-1 text-[0.65rem] label-tech text-ink-foreground backdrop-blur-sm">
                       {item.category}
                     </div>
-                  </div>
-                  <div className="p-6">
-                    <p className="label-tech text-primary">{item.location}</p>
-                    <h3 className="mt-2 font-display text-xl group-hover:text-primary transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="mt-3 text-sm text-muted-foreground line-clamp-2">
-                      {item.caption}
-                    </p>
                   </div>
                 </div>
               </Reveal>
