@@ -9,12 +9,12 @@ export const Route = createFileRoute("/businesses/water")({
       {
         name: "description",
         content:
-          "Raw Water, RO Water, DM Water and Distilled Water supply for industrial and commercial requirements across Kutch.",
+          "Raw Water, RO Water, DM Water and Bulk Water Supply for industrial, commercial, construction, and infrastructure requirements across Kutch.",
       },
       { property: "og:title", content: "Water Solutions — Mira Enterprises" },
       {
         property: "og:description",
-        content: "Complete water supply solutions for industrial and commercial requirements.",
+        content: "Complete water supply solutions for industrial, commercial, and construction requirements.",
       },
     ],
   }),
@@ -32,7 +32,7 @@ function WaterPage() {
       >
         <p>
           Mira Enterprises provides water supply solutions for industrial and commercial
-          requirements, including Raw Water, RO Water, DM Water and Distilled Water.
+          requirements, including Raw Water, RO Water, DM Water and Bulk Water Supply.
         </p>
         <p>
           Our focus is on dependable supply, consistent service and solutions suited to the specific
@@ -56,8 +56,8 @@ function WaterPage() {
             d: "Demineralized (DM) water is treated to remove dissolved mineral ions, making it suitable for industrial applications where low-mineral water is important. It can be used in boilers, cooling systems, manufacturing processes, laboratories and other technical applications where mineral deposits or conductivity need to be controlled. Supply can be planned according to the customer's operational requirements.",
           },
           {
-            t: "Distilled Water",
-            d: "Distilled water is produced through a distillation process to achieve a high level of purity by removing many dissolved solids, minerals and impurities. It is suitable for specialized industrial, technical, laboratory and equipment-related applications where high-purity water is required. Mira Enterprises focuses on dependable supply and handling suited to the intended application.",
+            t: "Bulk Water Supply (Tanker Load)",
+            d: "Bulk water supply provides a convenient and dependable solution for customers requiring large quantities of water at their site. Water is delivered through tanker loads for industrial, commercial, construction, infrastructure and other operational requirements. Our tanker-based supply model helps customers manage high-volume water needs with scheduled deliveries, flexible quantities and reliable service based on their location and consumption requirements.",
           },
         ]}
       />

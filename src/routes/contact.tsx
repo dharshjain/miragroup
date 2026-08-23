@@ -217,9 +217,9 @@ function ContactPage() {
                         <SelectValue placeholder="Select business requirement" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="Water Solutions">01. Water Solutions (Raw, RO, DM, Distilled)</SelectItem>
+                        <SelectItem value="Water Solutions">01. Water Solutions (Raw, RO, DM, Bulk Water Supply)</SelectItem>
                         <SelectItem value="Chemical & Specialized Tankers">02. Chemical & Specialized Tankers (ACN, SS, ISO)</SelectItem>
-                        <SelectItem value="Heavy Vehicles & Equipment">03. Heavy Vehicles & Equipment (Loaders, JCBs, Dumpers)</SelectItem>
+                        <SelectItem value="Heavy Vehicles & Equipment">03. Heavy Vehicles & Equipment (Excavators & Earthmoving)</SelectItem>
                         <SelectItem value="Oil Transportation">04. Edible & Non-Edible Oil Transportation</SelectItem>
                         <SelectItem value="Raw Salt">05. Raw Salt (Seawater Solar Salt, Bulk Industrial)</SelectItem>
                         <SelectItem value="General Industrial Support">06. General Logistics / Industrial Support</SelectItem>

@@ -26,10 +26,10 @@ export const verticals: Vertical[] = [
     entity: "Mira Enterprises",
     headline: "Reliable Water for Industrial & Commercial Needs",
     summary:
-      "Raw Water, RO Water, DM Water and Distilled Water supplied with a focus on reliability, quality and timely delivery.",
+      "Raw Water, RO Water, DM Water and Bulk Water Supply delivered with a focus on reliability, quality and timely delivery.",
     image: water,
     cta: "Explore Water Solutions",
-    specs: ["Raw Water", "RO Water", "DM Water", "Distilled Water"],
+    specs: ["Raw Water", "RO Water", "DM Water", "Bulk Water Supply"],
   },
   {
     index: "02",

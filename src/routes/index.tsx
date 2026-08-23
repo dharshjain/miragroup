@@ -288,7 +288,7 @@ function Home() {
               {
                 num: "05",
                 title: "Manufacturing Industries",
-                desc: "Industrial transportation, purified water supply (RO/DM/Distilled), and liquid cargo solutions.",
+                desc: "Industrial transportation, purified and bulk water supply (RO/DM/Bulk Water), and liquid cargo solutions.",
               },
               {
                 num: "06",

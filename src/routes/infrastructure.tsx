@@ -57,9 +57,9 @@ const infrastructurePillars = [
     index: "04",
     title: "Water Supply Infrastructure",
     tag: "PURIFICATION & BULK SUPPLY",
-    desc: "Dedicated processing and transport capabilities supporting four distinct categories: Raw Water, RO Water, DM Water, and Distilled Water.",
+    desc: "Dedicated processing and transport capabilities supporting four distinct categories: Raw Water, RO Water, DM Water, and Bulk Water Supply.",
     image: water,
-    specs: ["Raw Water Supply", "RO Filtration", "Demineralized Water", "Distilled Units"],
+    specs: ["Raw Water Supply", "RO Filtration", "Demineralized Water", "Bulk Water Supply"],
   },
   {
     index: "05",
