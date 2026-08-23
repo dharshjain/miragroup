@@ -220,7 +220,9 @@ function Home() {
                 delay={i * 0.08}
                 className="border-t border-ink-border pt-6 lg:pr-8"
               >
-                <p className="numeral text-ink-foreground">{n.v}</p>
+                <p className={`numeral ${n.v === "100+" ? "text-primary" : "text-ink-foreground"}`}>
+                  {n.v}
+                </p>
                 <p className="mt-6 label-tech text-ink-foreground/50">{n.l}</p>
               </Reveal>
             ))}

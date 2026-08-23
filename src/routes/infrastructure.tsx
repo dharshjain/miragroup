@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageIntro } from "@/components/page-intro";
 import { Reveal, RevealImage } from "@/components/motion-primitives";
+import { Truck } from "lucide-react";
 import infra from "@/assets/infrastructure.jpg";
 import tankers from "@/assets/tankers.jpg";
 import equipment from "@/assets/equipment.jpg";
@@ -189,15 +190,28 @@ function InfrastructurePage() {
               unrivaled logistical flexibility and response times.
             </p>
           </Reveal>
+
           <div className="grid gap-8 sm:grid-cols-2 lg:col-span-6 lg:col-start-7">
             {[
-              { label: "Own Fleet Vehicles", value: "100+" },
-              { label: "Core Verticals Supported", value: "5" },
-              { label: "Regional Hub", value: "Kandla — Mundra" },
-              { label: "Transportation Reach", value: "Pan-India" },
+              { label: "Own Fleet Vehicles", value: "100+", highlight: true },
+              { label: "Core Verticals Supported", value: "5", highlight: false },
+              { label: "Regional Hub", value: "Kandla — Mundra", isText: true },
+              { label: "Transportation Reach", value: "Pan-India", isText: true },
             ].map((stat, idx) => (
-              <Reveal key={stat.label} delay={idx * 0.08} className="border-t border-ink-border pt-6">
-                <p className="numeral text-ink-foreground">{stat.value}</p>
+              <Reveal
+                key={stat.label}
+                delay={idx * 0.08}
+                className="border-t border-ink-border pt-6"
+              >
+                {stat.isText ? (
+                  <p className="font-display text-2xl lg:text-3xl font-semibold text-ink-foreground tracking-tight leading-snug">
+                    {stat.value}
+                  </p>
+                ) : (
+                  <p className={`numeral ${stat.highlight ? "text-primary" : "text-ink-foreground"}`}>
+                    {stat.value}
+                  </p>
+                )}
                 <p className="mt-4 label-tech text-ink-foreground/50">{stat.label}</p>
               </Reveal>
             ))}
