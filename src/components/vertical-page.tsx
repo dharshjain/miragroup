@@ -42,27 +42,63 @@ export function VerticalHero({
 
 export function DetailList({
   label,
+  title,
   items,
 }: {
   label: string;
+  title?: string;
   items: { t: string; d?: string }[];
 }) {
   return (
-    <section className="border-b border-border">
-      <div className="shell grid gap-12 py-24 lg:grid-cols-12">
-        <Reveal className="lg:col-span-4">
-          <p className="label-tech border-t border-foreground/20 pt-4 text-primary">{label}</p>
-        </Reveal>
-        <div className="lg:col-span-7 lg:col-start-6">
+    <section className="border-b border-border bg-card/20">
+      <div className="shell grid gap-12 py-20 lg:grid-cols-12 lg:py-28">
+        <div className="lg:col-span-5">
+          <div className="sticky top-28">
+            <Reveal>
+              <span className="label-tech text-primary border-t border-primary/40 pt-3 inline-block">
+                {label}
+              </span>
+              <h2 className="display-lg mt-6 text-foreground">
+                {title || `Specialized ${label}`}
+              </h2>
+              <p className="mt-4 text-base text-muted-foreground leading-relaxed max-w-md">
+                Designed for high operational standards, safety compliance, and consistent industrial performance.
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.1}>
+              <div className="mt-8 hidden sm:flex flex-wrap gap-2 border-t border-border/60 pt-6">
+                {items.map((it, i) => (
+                  <span
+                    key={it.t}
+                    className="label-tech text-[0.7rem] px-3 py-1.5 border border-border bg-background/60 text-muted-foreground"
+                  >
+                    {String(i + 1).padStart(2, "0")}. {it.t}
+                  </span>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </div>
+
+        <div className="space-y-6 lg:col-span-7">
           {items.map((it, i) => (
-            <Reveal key={it.t} delay={i * 0.05}>
-              <div className="grid grid-cols-[auto_1fr] gap-8 border-t border-border py-8">
-                <span className="font-display text-lg text-foreground/25">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <h2 className="font-display text-2xl">{it.t}</h2>
-                  {it.d && <p className="mt-3 text-muted-foreground">{it.d}</p>}
+            <Reveal key={it.t} delay={i * 0.06}>
+              <div className="group relative overflow-hidden border border-border bg-background p-7 sm:p-9 transition-all duration-300 hover:border-primary/60 hover:shadow-md">
+                <div className="flex items-start gap-4">
+                  <span className="label-tech text-primary font-mono text-xs font-semibold px-2.5 py-1 bg-primary/10 border border-primary/20 shrink-0 mt-1">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <h3 className="font-display text-2xl text-foreground font-medium group-hover:text-primary transition-colors">
+                      {it.t}
+                    </h3>
+                    {it.d && (
+                      <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                        {it.d}
+                      </p>
+                    )}
+                  </div>
                 </div>
               </div>
             </Reveal>
