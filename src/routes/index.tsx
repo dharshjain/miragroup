@@ -280,8 +280,8 @@ function Home() {
               },
               {
                 num: "04",
-                title: "Salt & Minerals",
-                desc: "Raw and industrial salt supply and heavy equipment support from our Kutch-based operations.",
+                title: "Raw Salt",
+                desc: "Natural, unrefined salt produced from seawater and supplied in bulk for industrial applications from dedicated salt pans in Kutch.",
               },
               {
                 num: "05",

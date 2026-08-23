@@ -2,7 +2,7 @@ import water from "@/assets/water.jpg";
 import tankers from "@/assets/tankers.jpg";
 import equipment from "@/assets/equipment.jpg";
 import oil from "@/assets/oil.jpg";
-import salt from "@/assets/salt.jpg";
+import salt from "@/assets/raw-salt-pans.jpg";
 
 export type Vertical = {
   index: string;
@@ -74,13 +74,14 @@ export const verticals: Vertical[] = [
     index: "05",
     slug: "salt",
     to: "/businesses/salt",
-    name: "Salt & Minerals",
+    name: "Raw Salt",
     entity: "Mira Salt Works",
-    headline: "Quality Salt from the Heart of Kutch",
+    headline: "Natural, Unrefined Seawater Salt from Kutch",
     summary:
-      "Kutch-based salt operations supplying raw, edible, industrial, refined free-flow and iodized salt for diverse commercial and industrial requirements.",
+      "Natural, unrefined salt produced from seawater and supplied in bulk for a wide range of industrial applications from Mira's dedicated salt pans in Kutch.",
     image: salt,
-    cta: "Explore Salt Solutions",
-    specs: ["Raw Salt", "Industrial Salt", "Refined Free Flow", "Iodized Salt", "Edible Salt"],
+    cta: "Explore Raw Salt",
+    specs: ["Natural Unrefined Salt", "Seawater Salt Pans", "Bulk Industrial Quantities", "Custom Quality & Sizing"],
   },
 ];
+

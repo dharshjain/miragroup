@@ -221,7 +221,7 @@ function ContactPage() {
                         <SelectItem value="Chemical & Specialized Tankers">02. Chemical & Specialized Tankers (MS, SS, ISO)</SelectItem>
                         <SelectItem value="Heavy Vehicles & Equipment">03. Heavy Vehicles & Equipment (Loaders, JCBs, Dumpers)</SelectItem>
                         <SelectItem value="Oil Transportation">04. Edible & Non-Edible Oil Transportation</SelectItem>
-                        <SelectItem value="Salt & Minerals">05. Salt & Minerals (Raw, Industrial, Iodized, Refined)</SelectItem>
+                        <SelectItem value="Raw Salt">05. Raw Salt (Seawater Solar Salt, Bulk Industrial)</SelectItem>
                         <SelectItem value="General Industrial Support">06. General Logistics / Industrial Support</SelectItem>
                       </SelectContent>
                     </Select>

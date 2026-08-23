@@ -9,7 +9,7 @@ export const businessLinks = [
   { to: "/businesses/tankers", label: "Chemical & Specialized Tankers", index: "02" },
   { to: "/businesses/heavy-vehicles", label: "Heavy Vehicles & Equipment", index: "03" },
   { to: "/businesses/oil", label: "Oil Transportation", index: "04" },
-  { to: "/businesses/salt", label: "Salt & Minerals", index: "05" },
+  { to: "/businesses/salt", label: "Raw Salt", index: "05" },
 ] as const;
 
 const navLinks = [

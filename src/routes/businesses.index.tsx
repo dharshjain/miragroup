@@ -10,7 +10,7 @@ export const Route = createFileRoute("/businesses/")({
       {
         name: "description",
         content:
-          "Water solutions, chemical and specialized tankers, heavy vehicles and equipment, oil transportation and salt & minerals — the five verticals of Mira Group.",
+          "Water solutions, chemical and specialized tankers, heavy vehicles and equipment, oil transportation and raw salt — the five verticals of Mira Group.",
       },
       { property: "og:title", content: "Our Businesses — Mira Group" },
       {

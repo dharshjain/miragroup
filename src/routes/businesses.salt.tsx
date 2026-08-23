@@ -1,20 +1,21 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { DetailList, StrengthBand, VerticalCta, VerticalHero } from "@/components/vertical-page";
-import salt from "@/assets/salt.jpg";
+import { StrengthBand, VerticalCta, VerticalHero } from "@/components/vertical-page";
+import saltPans from "@/assets/raw-salt-pans.jpg";
 
 export const Route = createFileRoute("/businesses/salt")({
   head: () => ({
     meta: [
-      { title: "Salt & Minerals — Mira Salt Works, Kutch" },
+      { title: "Raw Salt — Mira Salt Works, Kutch" },
       {
         name: "description",
         content:
-          "Raw, industrial, refined free-flow, iodized and edible salt from Kutch-based salt operations at Adesar, Rapar.",
+          "Natural, unrefined salt produced from seawater and supplied in bulk for industrial applications from Mira's dedicated salt pans in Kutch.",
       },
-      { property: "og:title", content: "Sea Salt & Industrial Salt — Mira Salt Works" },
+      { property: "og:title", content: "Raw Salt — Mira Salt Works" },
       {
         property: "og:description",
-        content: "Quality salt from the heart of Kutch for food and industrial applications.",
+        content:
+          "Natural, unrefined seawater salt supplied in bulk for chemical manufacturing, chlor-alkali, water treatment, textile, leather and food processing.",
       },
     ],
   }),
@@ -27,65 +28,25 @@ function SaltPage() {
       <VerticalHero
         index="05"
         entity="Mira Salt Works"
-        title="Quality Salt from the Heart of Kutch"
-        image={salt}
+        title="Raw Salt"
+        image={saltPans}
       >
         <p>
-          Mira's salt operations began in 1997 with the objective of manufacturing and supplying
-          edible and industrial salt.
+          Natural, unrefined salt produced from seawater and supplied in bulk for a wide range of industrial applications. Mira has its own salt pans dedicated to the production of raw salt, enabling a reliable and consistent supply for large-scale industrial requirements.
         </p>
         <p>
-          Operating from Kutch, one of India's important salt-producing regions, Mira Salt Works
-          serves customers requiring different salt grades for food and industrial applications.
+          Raw salt is widely used across industries including chemical manufacturing, chlor-alkali processing, water treatment, textile processing, leather, food processing and various other manufacturing applications. Available in bulk quantities, it can be supplied according to required quality, particle size and application-specific requirements.
         </p>
       </VerticalHero>
 
-      <DetailList
-        label="Our Salt Portfolio"
-        items={[
-          {
-            t: "Raw Salt",
-            d: "Natural salt suitable for further processing and industrial applications.",
-          },
-          {
-            t: "Industrial Salt",
-            d: "Salt grades developed for diverse industrial requirements.",
-          },
-          {
-            t: "Refined Free Flow Salt",
-            d: "Refined salt designed for applications requiring consistent quality and free-flowing characteristics.",
-          },
-          {
-            t: "Iodized Salt",
-            d: "Processed salt supplied for edible applications with iodine requirements.",
-          },
-          {
-            t: "Edible Salt",
-            d: "Food-grade salt available in different specifications and packaging formats.",
-          },
-        ]}
-      />
-
-      <section className="border-b border-border">
-        <div className="shell grid gap-10 py-16 lg:grid-cols-12">
-          <p className="label-tech border-t border-foreground/20 pt-4 text-primary lg:col-span-4">
-            Packaging
-          </p>
-          <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground lg:col-span-7 lg:col-start-6">
-            Depending on the product and customer requirement, packaging options can include bulk
-            and retail-oriented formats.
-          </p>
-        </div>
-      </section>
-
       <StrengthBand
-        label="Our Focus"
+        label="Our Capabilities"
         items={[
-          "Consistent quality",
-          "Multiple grades",
-          "Reliable supply",
-          "Customer-specific specifications",
-          "Domestic and export-oriented requirements",
+          "Dedicated salt pans in Kutch",
+          "Natural seawater solar evaporation",
+          "Bulk supply for large-scale requirements",
+          "Custom quality & particle size specifications",
+          "Reliable & consistent industrial supply",
         ]}
       />
 
