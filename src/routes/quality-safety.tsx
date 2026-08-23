@@ -10,7 +10,7 @@ export const Route = createFileRoute("/quality-safety")({
       {
         name: "description",
         content:
-          "Mira Group is ISO 9001:2015 certified. Safety first approach for chemical tanker transportation, water supply, and industrial logistics.",
+          "Mira Group is ISO 9001:2015 certified. Safety first approach with experienced personnel for hazardous chemical handling, SS tanks only for quality maintenance, and 24/7 live vehicle tracking.",
       },
       { property: "og:title", content: "Quality & Safety — Mira Group" },
       {
@@ -26,33 +26,33 @@ export const Route = createFileRoute("/quality-safety")({
 const qualityPoints = [
   {
     num: "01",
-    title: "Consistent Service Standards",
-    desc: "Rigorous adherence to customer specifications across tanker transport, water purity, and salt manufacturing.",
+    title: "Experienced Hazardous Chemical Personnel",
+    desc: "Our operations are managed by experienced personnel trained specifically for handling hazardous chemicals and complex liquid dispatches.",
   },
   {
     num: "02",
-    title: "Trained Operational Personnel",
-    desc: "Drivers, supervisors, and site technicians undergo specialized safety and cargo handling training.",
+    title: "SS Tanks Only for Quality Maintenance",
+    desc: "For strict quality maintenance, zero cargo contamination, and chemical purity, we utilize Stainless Steel (SS) tanks only.",
   },
   {
     num: "03",
-    title: "Equipment Maintenance",
-    desc: "Scheduled maintenance programs for MS/SS tankers, heavy dumpers, loaders, and purification plants.",
+    title: "24/7 Live Vehicle Tracking",
+    desc: "For maximum safety, route compliance, and peace of mind, we have dedicated round-the-clock personnel monitoring live GPS tracking of all vehicles 24/7.",
   },
   {
     num: "04",
-    title: "Responsible Cargo Handling",
-    desc: "Dedicated protocols for handling hazardous chemicals, corrosive acids, and food-grade edible liquids.",
+    title: "In-House Fleet Maintenance & Washing",
+    desc: "Proactive servicing at our in-house workshop and high-pressure decontamination at our in-house washing center prior to every loading.",
   },
   {
     num: "05",
-    title: "Timely Execution",
-    desc: "Punctual logistics dispatching and disciplined turnaround times for industrial site operations.",
+    title: "Punctual & Disciplined Execution",
+    desc: "Timely dispatching, transparent communication, and disciplined turnaround times for industrial site operations.",
   },
   {
     num: "06",
-    title: "Customer-Focused Processes",
-    desc: "Clear communication, transparent documentation, and customizable operational procedures.",
+    title: "ISO 9001:2015 Certified Management",
+    desc: "Structured operational procedures, continuous improvement, and full compliance with industrial safety regulations.",
   },
 ];
 
@@ -67,8 +67,8 @@ function QualitySafetyPage() {
           Mira Group believes that quality and safety are fundamental to every business operation.
         </p>
         <p>
-          From specialized tanker transportation to industrial water supply and salt manufacturing,
-          our teams follow strict operational practices focused on reliability, responsible handling, and customer requirements.
+          From specialized tanker transportation to industrial water supply and raw salt operations,
+          our teams follow strict operational practices focused on safety compliance, quality maintenance, and customer satisfaction.
         </p>
       </PageIntro>
 
@@ -129,12 +129,12 @@ function QualitySafetyPage() {
           <div className="space-y-6 text-lg leading-relaxed text-muted-foreground lg:col-span-6 lg:col-start-7">
             <Reveal>
               <p>
-                Specialized chemical and liquid cargo transportation demands a high level of operational discipline. Our drivers and supervisors are trained to work in accordance with industrial safety practices and customer-site requirements.
+                Specialized chemical and liquid cargo transportation demands a high level of operational discipline. We employ experienced personnel specifically trained for handling hazardous chemicals in full compliance with industrial safety protocols.
               </p>
             </Reveal>
             <Reveal delay={0.08}>
               <p>
-                Every vehicle in our chemical fleet undergoes regular pressure testing, valve checks, and lining inspections before dispatch. Drivers are equipped with full protective personal equipment (PPE) and emergency response protocols suited for chemical liquid cargo.
+                For quality maintenance, we use SS (Stainless Steel) tanks only for specialized chemical liquid transportation, ensuring maximum purity and protection against contamination. Additionally, our dedicated round-the-clock personnel monitor live GPS vehicle tracking 24/7 to guarantee route safety and real-time transit updates.
               </p>
             </Reveal>
           </div>
@@ -149,7 +149,7 @@ function QualitySafetyPage() {
           </Reveal>
           <Reveal delay={0.1} className="lg:col-span-4 lg:col-start-9">
             <p className="text-ink-foreground/60">
-              Need specialized liquid transport or site solutions with verified quality processes? Talk to our safety & operations team today.
+              Need specialized liquid transport or site solutions with verified quality processes and 24/7 live tracking? Talk to our safety & operations team today.
             </p>
             <Link to="/contact" className="mt-10 inline-block label-tech rule-link text-primary">
               Get in Touch →

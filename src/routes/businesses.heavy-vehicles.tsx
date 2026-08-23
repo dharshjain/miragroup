@@ -9,12 +9,12 @@ export const Route = createFileRoute("/businesses/heavy-vehicles")({
       {
         name: "description",
         content:
-          "Trucks, dumpers, loaders, JCBs and forklifts for salt cargo handling, container movement and industrial transportation around Kandla–Mundra.",
+          "Heavy excavators for earthmoving, land development, salt field operations, and industrial site requirements around Kutch.",
       },
-      { property: "og:title", content: "Heavy Vehicles & Industrial Equipment — Mira Group" },
+      { property: "og:title", content: "Heavy Excavators & Equipment — Mira Group" },
       {
         property: "og:description",
-        content: "Equipment that keeps industrial operations moving across the Kandla–Mundra region.",
+        content: "Heavy excavators supporting industrial site operations, salt fields, and land development.",
       },
     ],
   }),
@@ -27,38 +27,32 @@ function HeavyPage() {
       <VerticalHero
         index="03"
         entity="Mira Heavy Vehicles"
-        title="Equipment That Keeps Operations Moving"
+        title="Heavy Excavator Equipment Solutions"
         image={equipment}
       >
         <p>
-          Industrial operations require dependable equipment for loading, handling, movement and
-          cargo support.
+          Industrial site operations require dependable heavy equipment for excavation, earthmoving, land clearing, and material movement.
         </p>
         <p>
-          Mira Group provides heavy vehicles and equipment for salt cargo handling, container
-          movement and industrial transportation requirements, particularly around the
-          Kandla–Mundra region.
+          Mira Heavy Vehicles provides heavy excavators dedicated to earthmoving, salt field operations, site development, and heavy industrial project requirements across Kutch.
         </p>
       </VerticalHero>
 
       <StrengthBand
-        label="Equipment Portfolio"
+        label="Excavator Equipment Portfolio"
         items={[
-          "Trucks",
-          "Dumpers",
-          "Loaders",
-          "JCBs",
-          "Forklifts",
-          "Heavy commercial vehicles",
+          "Heavy excavators",
+          "Earthmoving excavators",
+          "Site development equipment",
+          "Salt field excavation support",
+          "Contractual excavator operations",
         ]}
       />
 
       <section className="border-b border-border">
         <div className="shell grid gap-10 py-20 lg:grid-cols-12">
           <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground lg:col-span-7 lg:col-start-6">
-            Our equipment can be made available for suitable industrial and contractual
-            requirements, helping customers access the resources they need without maintaining an
-            entire equipment fleet themselves.
+            Our heavy excavators are available for short-term and contractual industrial requirements, helping customers execute large-scale earthmoving and site operations with high efficiency and reliability.
           </p>
         </div>
       </section>

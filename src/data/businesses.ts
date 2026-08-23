@@ -23,7 +23,7 @@ export const verticals: Vertical[] = [
     slug: "water",
     to: "/businesses/water",
     name: "Water Solutions",
-    entity: "Mira Water Works",
+    entity: "Mira Enterprises",
     headline: "Reliable Water for Industrial & Commercial Needs",
     summary:
       "Raw Water, RO Water, DM Water and Distilled Water supplied with a focus on reliability, quality and timely delivery.",
@@ -36,7 +36,7 @@ export const verticals: Vertical[] = [
     slug: "tankers",
     to: "/businesses/tankers",
     name: "Chemical & Specialized Tankers",
-    entity: "Mira Transport Co.",
+    entity: "Mira Logistics",
     headline: "Safe Movement of Specialized Liquid Cargo",
     summary:
       "Specialized transportation for acids, chemicals and liquid cargo through ACN, SS, coated and ISO tanker capabilities, supported by experienced operations and safety-focused practices.",
@@ -52,10 +52,10 @@ export const verticals: Vertical[] = [
     entity: "Mira Heavy Vehicles",
     headline: "Equipment That Keeps Industry Moving",
     summary:
-      "Trucks, dumpers, loaders, JCBs and forklifts supporting cargo handling, salt operations, container movement and industrial requirements.",
+      "Heavy excavators supporting earthmoving, land development, salt field operations, and industrial project requirements.",
     image: equipment,
     cta: "Explore Equipment",
-    specs: ["Trucks", "Dumpers", "Loaders", "JCBs", "Forklifts"],
+    specs: ["Excavators", "Heavy Earthmoving Excavators", "Site Excavator Operations"],
   },
   {
     index: "04",

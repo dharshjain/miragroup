@@ -5,7 +5,7 @@ import tankers from "@/assets/tankers.jpg";
 export const Route = createFileRoute("/businesses/tankers")({
   head: () => ({
     meta: [
-      { title: "Chemical & Specialized Tankers — Mira Transport Co." },
+      { title: "Chemical & Specialized Tankers — Mira Logistics" },
       {
         name: "description",
         content:
@@ -26,7 +26,7 @@ function TankerPage() {
     <>
       <VerticalHero
         index="02"
-        entity="Mira Transport Co."
+        entity="Mira Logistics"
         title="Safe Movement of Specialized Liquid Cargo"
         image={tankers}
       >
@@ -35,7 +35,7 @@ function TankerPage() {
           disciplined operating procedures.
         </p>
         <p>
-          Mira Transport Co. provides specialized tanker transportation solutions for industrial
+          Mira Logistics provides specialized tanker transportation solutions for industrial
           liquid cargo, with capabilities covering different tanker constructions and applications.
         </p>
       </VerticalHero>

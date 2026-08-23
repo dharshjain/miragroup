@@ -38,19 +38,19 @@ const infrastructurePillars = [
   },
   {
     index: "02",
-    title: "Heavy Vehicle Fleet",
-    tag: "COMMERCIAL TRANSPORT",
-    desc: "Trucks, dumpers, and heavy vehicles supporting cargo handling, salt operations, container movement, and long-distance industrial logistics.",
+    title: "Heavy Excavator Equipment",
+    tag: "EARTHMOVING & SITE OPERATIONS",
+    desc: "Heavy excavators supporting earthmoving, land clearing, salt field development, and heavy industrial project requirements.",
     image: equipment,
-    specs: ["Heavy Commercial Trucks", "Multi-Axle Dumpers", "Container Movers"],
+    specs: ["Heavy Excavators", "Earthmoving Excavators", "Site Excavator Operations"],
   },
   {
     index: "03",
-    title: "Material Handling Equipment",
-    tag: "PORT & SITE OPERATIONS",
-    desc: "Loaders, JCBs, dumpers, and forklifts deployed for heavy cargo handling and industrial operations around Kandla, Mundra, and regional hubs.",
+    title: "In-House Maintenance Facilities",
+    tag: "FLEET UPTIME & HYGIENE",
+    desc: "In-house technical workshop and dedicated tanker washing center ensuring fleet reliability, zero breakdown risk, and clean cargo handling.",
     image: infra,
-    specs: ["Loaders", "JCB Earthmovers", "Forklifts", "Site Heavy Equipment"],
+    specs: ["In-House Workshop", "Tanker Washing Center", "Preventive Servicing", "Zero Contamination"],
   },
   {
     index: "04",
@@ -64,9 +64,9 @@ const infrastructurePillars = [
     index: "05",
     title: "Kutch Salt Operations",
     tag: "MANUFACTURING & REFINING",
-    desc: "Kutch-based salt manufacturing and processing operations at Adesar & Rapar producing raw, industrial, refined free-flow, and iodized salt.",
+    desc: "Kutch-based salt manufacturing and processing operations producing raw salt from dedicated seawater salt pans.",
     image: salt,
-    specs: ["Raw Salt Fields", "Refining Plants", "Iodization Units", "Bulk & Retail Packaging"],
+    specs: ["Dedicated Salt Pans", "Seawater Evaporation", "Bulk Industrial Supply"],
   },
 ];
 
@@ -78,8 +78,8 @@ function InfrastructurePage() {
         title="Built to Support Industrial Requirements"
       >
         <p>
-          Mira Group's capabilities are supported by its own fleet, specialized tanker
-          infrastructure, heavy equipment and experienced operational teams.
+          Mira Group's capabilities are supported by its own fleet of more than 100 vehicles, specialized tanker
+          infrastructure, heavy excavators, in-house workshop, and dedicated tanker washing facilities.
         </p>
         <p>
           Positioned strategically in Gandhidham, Kutch, our infrastructure is designed to serve
@@ -94,6 +94,37 @@ function InfrastructurePage() {
         className="h-[60vh] w-full"
         priority
       />
+
+      {/* In-House Operational Facilities Feature Section */}
+      <section className="border-b border-border bg-card/40">
+        <div className="shell grid gap-12 py-20 lg:grid-cols-12 lg:py-28">
+          <Reveal className="lg:col-span-5">
+            <span className="label-tech text-primary">In-House Operational Support</span>
+            <h2 className="display-lg mt-6">Maintaining High Reliability & Uptime</h2>
+            <p className="mt-6 text-muted-foreground leading-relaxed text-lg">
+              To minimize transit delays and ensure pristine cargo hygiene, we maintain our own specialized facility infrastructure in Kutch.
+            </p>
+          </Reveal>
+
+          <div className="grid gap-6 lg:col-span-7 sm:grid-cols-2">
+            <Reveal delay={0.08} className="border border-border bg-background p-8">
+              <span className="label-tech text-primary">01. Fleet Maintenance</span>
+              <h3 className="font-display text-2xl mt-3 text-foreground">In-House Workshop</h3>
+              <p className="mt-4 text-muted-foreground leading-relaxed text-sm sm:text-base">
+                We maintain an in-house technical workshop to better maintain our fleet, execute routine preventive maintenance, and minimize breakdowns on transit routes.
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.14} className="border border-border bg-background p-8">
+              <span className="label-tech text-primary">02. Cargo Hygiene</span>
+              <h3 className="font-display text-2xl mt-3 text-foreground">Tanker Washing Center</h3>
+              <p className="mt-4 text-muted-foreground leading-relaxed text-sm sm:text-base">
+                Equipped with an in-house tanker washing center for thorough decontamination and high-pressure washing between dispatches, guaranteeing better reliability and customer satisfaction.
+              </p>
+            </Reveal>
+          </div>
+        </div>
+      </section>
 
       {/* Infrastructure Pillars */}
       <section className="border-b border-border">
@@ -160,7 +191,7 @@ function InfrastructurePage() {
           </Reveal>
           <div className="grid gap-8 sm:grid-cols-2 lg:col-span-6 lg:col-start-7">
             {[
-              { label: "Own Fleet Vehicles", value: "85+" },
+              { label: "Own Fleet Vehicles", value: "100+" },
               { label: "Core Verticals Supported", value: "5" },
               { label: "Regional Hub", value: "Kandla — Mundra" },
               { label: "Transportation Reach", value: "Pan-India" },

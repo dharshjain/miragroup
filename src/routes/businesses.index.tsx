@@ -69,7 +69,7 @@ function BusinessesIndex() {
             <h2 className="display-lg mt-6">Industrial Transportation & Logistics</h2>
             <p className="mt-4 font-display text-xl text-foreground/80">Moving Cargo With Precision & Reliability</p>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              Mira Logistics provides transportation solutions for industrial and commercial cargo, with particular experience in liquid cargo and specialized transportation requirements. Operating a fleet of more than 85 own trailers and tankers across local and Pan-India routes.
+              Mira Logistics provides transportation solutions for industrial and commercial cargo, with particular experience in liquid cargo and specialized transportation requirements. Operating an own fleet of more than 100 vehicles and tankers across local and Pan-India routes.
             </p>
           </Reveal>
           <div className="lg:col-span-6 lg:col-start-7">

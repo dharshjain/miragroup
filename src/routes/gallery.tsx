@@ -47,7 +47,7 @@ const galleryData: GalleryItem[] = [
     category: "Fleet & Tankers",
     location: "Gandhidham — Kutch",
     image: hero,
-    caption: "Mira Transport Co. specialized acid & chemical tankers parked at the central logistics terminal.",
+    caption: "Mira Logistics specialized acid & chemical tankers parked at the central logistics terminal.",
   },
   {
     id: "g2",
@@ -71,7 +71,7 @@ const galleryData: GalleryItem[] = [
     category: "Water Supply",
     location: "Gandhidham Water Facility",
     image: water,
-    caption: "Mira Water Works purification and bulk tanker loading bays for Raw, RO, and DM water.",
+    caption: "Mira Enterprises purification and bulk tanker loading bays for Raw, RO, and DM water.",
   },
   {
     id: "g5",

@@ -59,7 +59,7 @@ const reasons = [
 
 const numbers = [
   { v: "1997", l: "Journey Began" },
-  { v: "85+", l: "Own Fleet Vehicles" },
+  { v: "100+", l: "Own Fleet Vehicles" },
   { v: "5", l: "Core Business Verticals" },
   { v: "PAN INDIA", l: "Transportation Reach" },
 ];

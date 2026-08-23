@@ -5,13 +5,13 @@ import water from "@/assets/water.jpg";
 export const Route = createFileRoute("/businesses/water")({
   head: () => ({
     meta: [
-      { title: "Water Solutions — Mira Water Works, Kutch" },
+      { title: "Water Solutions — Mira Enterprises, Kutch" },
       {
         name: "description",
         content:
           "Raw Water, RO Water, DM Water and Distilled Water supply for industrial and commercial requirements across Kutch.",
       },
-      { property: "og:title", content: "Water Solutions — Mira Water Works" },
+      { property: "og:title", content: "Water Solutions — Mira Enterprises" },
       {
         property: "og:description",
         content: "Complete water supply solutions for industrial and commercial requirements.",
@@ -26,12 +26,12 @@ function WaterPage() {
     <>
       <VerticalHero
         index="01"
-        entity="Mira Water Works"
+        entity="Mira Enterprises"
         title="Complete Water Supply Solutions"
         image={water}
       >
         <p>
-          Mira Water Works provides water supply solutions for industrial and commercial
+          Mira Enterprises provides water supply solutions for industrial and commercial
           requirements, including Raw Water, RO Water, DM Water and Distilled Water.
         </p>
         <p>
@@ -57,13 +57,13 @@ function WaterPage() {
           },
           {
             t: "Distilled Water",
-            d: "Distilled water is produced through a distillation process to achieve a high level of purity by removing many dissolved solids, minerals and impurities. It is suitable for specialized industrial, technical, laboratory and equipment-related applications where high-purity water is required. Mira Water Works focuses on dependable supply and handling suited to the intended application.",
+            d: "Distilled water is produced through a distillation process to achieve a high level of purity by removing many dissolved solids, minerals and impurities. It is suitable for specialized industrial, technical, laboratory and equipment-related applications where high-purity water is required. Mira Enterprises focuses on dependable supply and handling suited to the intended application.",
           },
         ]}
       />
 
       <StrengthBand
-        label="Why Choose Mira Water Works?"
+        label="Why Choose Mira Enterprises?"
         items={[
           "Reliable supply",
           "Multiple water categories",
