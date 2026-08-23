@@ -32,9 +32,9 @@ const infrastructurePillars = [
     index: "01",
     title: "Specialized Tanker Fleet",
     tag: "LOGISTICS & LIQUID CARGO",
-    desc: "Different tanker configurations support diverse chemical and liquid cargo requirements across India. MS, SS, rubber-lined/coated, ACN, and ISO tanks.",
+    desc: "Different tanker configurations support diverse chemical and liquid cargo requirements across India. ACN, SS, rubber-lined/coated, and ISO tanks.",
     image: tankers,
-    specs: ["MS Tankers", "SS Tankers", "Coated Tankers", "ACN Tankers", "ISO Tanks"],
+    specs: ["ACN Tankers", "SS Tankers", "Coated Tankers", "ISO Tanks"],
   },
   {
     index: "02",

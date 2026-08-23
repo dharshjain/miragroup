@@ -39,10 +39,10 @@ export const verticals: Vertical[] = [
     entity: "Mira Transport Co.",
     headline: "Safe Movement of Specialized Liquid Cargo",
     summary:
-      "Specialized transportation for acids, chemicals and liquid cargo through MS, SS, coated and ISO tanker capabilities, supported by experienced operations and safety-focused practices.",
+      "Specialized transportation for acids, chemicals and liquid cargo through ACN, SS, coated and ISO tanker capabilities, supported by experienced operations and safety-focused practices.",
     image: tankers,
     cta: "Explore Tanker Solutions",
-    specs: ["MS Tankers", "SS Tankers", "Rubber-Lined / Coated", "ACN Tankers", "ISO Tanks"],
+    specs: ["ACN Tankers", "SS Tankers", "Rubber-Lined / Coated", "ISO Tanks"],
   },
   {
     index: "03",

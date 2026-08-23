@@ -9,7 +9,7 @@ export const Route = createFileRoute("/businesses/tankers")({
       {
         name: "description",
         content:
-          "Specialized tanker transportation for acids, chemicals and liquid cargo with MS, SS, rubber-lined, ACN and ISO tank capabilities.",
+          "Specialized tanker transportation for acids, chemicals and liquid cargo with ACN, SS, rubber-lined and ISO tank capabilities.",
       },
       { property: "og:title", content: "Acid & Chemical Tanker Transportation — Mira Transport" },
       {
@@ -43,10 +43,9 @@ function TankerPage() {
       <StrengthBand
         label="Our Fleet Includes"
         items={[
-          "MS Tankers",
+          "ACN Tankers",
           "SS Tankers",
           "Rubber-Lined / Coated Tankers",
-          "Specialized ACN Tankers",
           "ISO Tank Transportation",
         ]}
       />
@@ -55,8 +54,8 @@ function TankerPage() {
         label="Tanker Types"
         items={[
           {
-            t: "MS Tankers",
-            d: "Mild Steel (MS) tankers are designed for the transportation of suitable liquid cargo where the product specification and operating conditions are compatible with carbon steel construction. They offer a practical and robust solution for industrial liquid transportation, with different tanker configurations available to suit cargo requirements, capacity and operational needs.",
+            t: "ACN Tankers",
+            d: "Acrylonitrile (ACN) Tankers are specialized tankers designed for the safe and reliable transportation of Acrylonitrile (ACN) in accordance with applicable handling and transportation requirements. These tankers are configured with suitable tank materials, fittings, safety features and operational specifications to support the secure movement of ACN between production facilities, storage terminals and industrial destinations.",
           },
           {
             t: "SS Tankers",
@@ -65,10 +64,6 @@ function TankerPage() {
           {
             t: "Rubber-Lined / Coated Tankers",
             d: "Specialized tankers equipped with rubber lining or protective chemical coatings engineered specifically for highly reactive acids and aggressive liquid chemicals, ensuring vessel longevity and zero cargo contamination.",
-          },
-          {
-            t: "Specialized ACN Tankers",
-            d: "Purpose-built Acrylonitrile (ACN) tankers engineered to stringent temperature, pressure, and safety specifications required for hazardous organic compounds and specialized industrial chemical movement.",
           },
           {
             t: "ISO Tank Transportation",
