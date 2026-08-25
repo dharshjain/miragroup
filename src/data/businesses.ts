@@ -53,7 +53,7 @@ export const verticals: Vertical[] = [
     headline: "Equipment That Keeps Industry Moving",
     summary:
       "Heavy excavators supporting earthmoving, land development, salt field operations, and industrial project requirements.",
-    image: equipment,
+    image: "/Heavy vehicles/IMAG0149.jpg",
     cta: "Explore Equipment",
     specs: ["Excavators", "Heavy Earthmoving Excavators", "Site Excavator Operations"],
   },

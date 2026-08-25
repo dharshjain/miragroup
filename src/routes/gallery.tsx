@@ -2,14 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { useHeaderVisible } from "@/hooks/use-header-visible";
 import { PageIntro } from "@/components/page-intro";
-import { Reveal, RevealImage } from "@/components/motion-primitives";
-import hero from "@/assets/hero-fleet.jpg";
-import tankers from "@/assets/tankers.jpg";
-import equipment from "@/assets/equipment.jpg";
-import water from "@/assets/water.jpg";
-import salt from "@/assets/salt.jpg";
-import infra from "@/assets/infrastructure.jpg";
-import safety from "@/assets/safety.jpg";
+import { Reveal } from "@/components/motion-primitives";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -18,95 +11,210 @@ export const Route = createFileRoute("/gallery")({
       {
         name: "description",
         content:
-          "Visual showcase of Mira Group's fleet, chemical tankers, heavy equipment, water supply activities, salt fields, and industrial infrastructure in Kutch.",
+          "Visual showcase of Mira Group's fleet, chemical tankers, heavy vehicles, bulk water supply activities, and salt fields in Kutch.",
       },
       { property: "og:title", content: "Gallery — Mira Group Operations" },
       {
         property: "og:description",
         content:
-          "Explore photographs of Mira Group's specialized fleet, heavy machinery, water plants, and salt manufacturing in Kutch.",
+          "Explore authentic photographs of Mira Group's specialized fleet, heavy machinery, bulk water plant, and salt manufacturing in Kutch.",
       },
     ],
   }),
   component: GalleryPage,
 });
 
+type GalleryCategory =
+  | "Fleet & Tankers"
+  | "Heavy Vehicles"
+  | "Bulk Water Supply"
+  | "Salt Operations";
+
 type GalleryItem = {
   id: string;
   title: string;
-  category: "Fleet & Tankers" | "Heavy Equipment" | "Water Supply" | "Salt Operations" | "Team & Operations" | "Industrial Activities";
+  category: GalleryCategory;
   location: string;
   image: string;
   caption: string;
 };
 
 const galleryData: GalleryItem[] = [
+  // Fleet & Tankers (8 items from /public/Fleet and tanker/)
   {
-    id: "g1",
-    title: "Specialized Tanker Fleet Yard",
+    id: "ft-1",
+    title: "Specialized Acid & Chemical Tankers",
     category: "Fleet & Tankers",
-    location: "Gandhidham — Kutch",
-    image: hero,
-    caption: "Mira Logistics specialized acid & chemical tankers parked at the central logistics terminal.",
+    location: "Gandhidham Logistics Hub — Kutch",
+    image: "/Fleet and tanker/DSC00082.JPG",
+    caption: "Mira Logistics central fleet of specialized acid and liquid chemical tankers staged for Pan-India transit.",
   },
   {
-    id: "g2",
-    title: "Stainless Steel Chemical Tanker",
+    id: "ft-2",
+    title: "High-Capacity Cargo Tankers",
     category: "Fleet & Tankers",
     location: "Kandla Port Industrial Corridor",
-    image: tankers,
-    caption: "High-grade SS tanker for corrosive chemical and liquid cargo movement across Pan-India routes.",
+    image: "/Fleet and tanker/DSC00086.JPG",
+    caption: "High-volume chemical payload tankers compliant with national hazardous cargo transport standards.",
   },
   {
-    id: "g3",
-    title: "Heavy Loaders & Container Handlers",
-    category: "Heavy Equipment",
-    location: "Mundra Port Logistics Hub",
-    image: equipment,
-    caption: "Mira Heavy Vehicles equipment supporting container movement and heavy cargo handling.",
+    id: "ft-3",
+    title: "Stainless Steel Chemical Tanker",
+    category: "Fleet & Tankers",
+    location: "Gandhidham Operational Terminal",
+    image: "/Fleet and tanker/DSC00096.JPG",
+    caption: "High-grade SS tanker specifically engineered for corrosive chemical and industrial liquid cargo.",
   },
   {
-    id: "g4",
-    title: "Industrial RO & Water Supply Units",
-    category: "Water Supply",
-    location: "Gandhidham Water Facility",
-    image: water,
-    caption: "Mira Enterprises purification and bulk tanker loading bays for Raw, RO, and DM water.",
+    id: "ft-4",
+    title: "Multi-Axle Specialized Fleet",
+    category: "Fleet & Tankers",
+    location: "Mundra Port Logistics Corridor",
+    image: "/Fleet and tanker/DSC00186.JPG",
+    caption: "Heavy-duty multi-axle tankers ensuring load distribution, road safety, and continuous long-haul transit.",
   },
   {
-    id: "g5",
-    title: "Raw & Refined Salt Operations",
+    id: "ft-5",
+    title: "Chemical Logistics Staging Yard",
+    category: "Fleet & Tankers",
+    location: "Gandhidham Terminal",
+    image: "/Fleet and tanker/DSC00282.JPG",
+    caption: "Dedicated logistics parking and inspection terminal for liquid cargo dispatches.",
+  },
+  {
+    id: "ft-6",
+    title: "Rubber-Lined Chemical Tanker",
+    category: "Fleet & Tankers",
+    location: "Kutch Logistics Facility",
+    image: "/Fleet and tanker/DSC_0155.JPG",
+    caption: "Custom rubber-lined tanker suitable for concentrated acid and reactive liquid transportation.",
+  },
+  {
+    id: "ft-7",
+    title: "Pan-India Transport Fleet",
+    category: "Fleet & Tankers",
+    location: "Kandla Highway Logistics Hub",
+    image: "/Fleet and tanker/DSC_0156.JPG",
+    caption: "Long-haul tanker lineup dedicated to seamless industrial supply chain transport across India.",
+  },
+  {
+    id: "ft-8",
+    title: "Mira Group Logistics Convoy",
+    category: "Fleet & Tankers",
+    location: "Gandhidham Terminal — Kutch",
+    image: "/Fleet and tanker/slid1.jpg",
+    caption: "Primary fleet line of acid and chemical transportation tankers operational across industrial hubs.",
+  },
+
+  // Heavy Vehicles (4 items from /public/Heavy vehicles/)
+  {
+    id: "hv-1",
+    title: "Heavy Tracked Excavator Operations",
+    category: "Heavy Vehicles",
+    location: "Industrial Project Site — Kutch",
+    image: "/Heavy vehicles/20150827_125116.jpg",
+    caption: "Heavy machinery executing earthmoving, land leveling, and site excavation operations.",
+  },
+  {
+    id: "hv-2",
+    title: "Site Clearing Excavator",
+    category: "Heavy Vehicles",
+    location: "Infrastructure Development Hub",
+    image: "/Heavy vehicles/20150827_125118.jpg",
+    caption: "High-capacity excavator used in major site preparation and earthmoving projects.",
+  },
+  {
+    id: "hv-3",
+    title: "Material Handling & Heavy Fleet",
+    category: "Heavy Vehicles",
+    location: "Gandhidham Equipment Depot",
+    image: "/Heavy vehicles/IMAG0148.jpg",
+    caption: "Heavy vehicles and specialized loaders deployed for site development and salt pan excavation.",
+  },
+  {
+    id: "hv-4",
+    title: "Heavy Duty Excavation Equipment",
+    category: "Heavy Vehicles",
+    location: "Mundra Heavy Equipment Bay",
+    image: "/Heavy vehicles/IMAG0149.jpg",
+    caption: "Heavy excavators supporting land development and industrial earthmoving requirements.",
+  },
+
+  // Bulk Water Supply (4 items from /public/bulk Water supply/)
+  {
+    id: "ws-1",
+    title: "Bulk Water Purification & Tanker Loading",
+    category: "Bulk Water Supply",
+    location: "Gandhidham Water Terminal",
+    image: "/bulk Water supply/513e5d92-238f-476d-8763-5a7157d1852b.jpg",
+    caption: "High-volume bulk water supply tankers supplying purified Raw, RO, and DM water to industries.",
+  },
+  {
+    id: "ws-2",
+    title: "Industrial RO Water Delivery Fleet",
+    category: "Bulk Water Supply",
+    location: "Kutch Industrial Zone",
+    image: "/bulk Water supply/IMG00297-20120116-1048.jpg",
+    caption: "Industrial grade RO purified water delivery tankers serving manufacturing plants.",
+  },
+  {
+    id: "ws-3",
+    title: "Bulk Water Supply Dispatch Bay",
+    category: "Bulk Water Supply",
+    location: "Mira Water Depot — Gandhidham",
+    image: "/bulk Water supply/IMG00311-20120203-1112.jpg",
+    caption: "Operational loading station for continuous bulk industrial water delivery.",
+  },
+  {
+    id: "ws-4",
+    title: "Demineralized & Utility Water Logistics",
+    category: "Bulk Water Supply",
+    location: "Kandla Industrial Belt",
+    image: "/bulk Water supply/IMG00529-20120804-1635.jpg",
+    caption: "Bulk water supply infrastructure fulfilling industrial utility and process water needs.",
+  },
+
+  // Salt Operations (4 items from /public/Salt/)
+  {
+    id: "so-1",
+    title: "Solar Salt Evaporation Ponds",
     category: "Salt Operations",
-    location: "Adesar / Rapar — Kutch",
-    image: salt,
-    caption: "Mira Salt Works sea salt harvesting and processing fields in the salt capital of Kutch.",
+    location: "Adesar / Rapar Salt Fields — Kutch",
+    image: "/Salt/20151208_095108.jpg",
+    caption: "Natural seawater evaporation pans located in the premier salt manufacturing region of Kutch.",
   },
   {
-    id: "g6",
-    title: "Port Logistics Infrastructure",
-    category: "Industrial Activities",
-    location: "Kandla — Mundra Hub",
-    image: infra,
-    caption: "Integrated logistical infrastructure handling multi-modal industrial cargo and liquid transport.",
+    id: "so-2",
+    title: "Raw Sea Salt Extraction",
+    category: "Salt Operations",
+    location: "Mira Salt Works — Kutch",
+    image: "/Salt/20151208_095115.jpg",
+    caption: "High-density brine crystallizing in solar pans prior to salt harvesting.",
   },
   {
-    id: "g7",
-    title: "Operational Safety Inspection",
-    category: "Team & Operations",
-    location: "Terminal Inspection Bay",
-    image: safety,
-    caption: "Trained supervisors verifying tanker seal integrity, pressure fittings, and safety compliance.",
+    id: "so-3",
+    title: "Industrial Salt Harvest Stockpile",
+    category: "Salt Operations",
+    location: "Adesar Salt Storage Works",
+    image: "/Salt/20151208_101447.jpg",
+    caption: "Harvested unrefined sea salt stacked for industrial washing, refining, and bulk movement.",
+  },
+  {
+    id: "so-4",
+    title: "Bulk Salt Loading & Dispatch",
+    category: "Salt Operations",
+    location: "Kutch Salt Depot",
+    image: "/Salt/20151208_101501.jpg",
+    caption: "Bulk industrial salt loading operations for chemical processing plants and export supply.",
   },
 ];
 
 const categories = [
   "All",
   "Fleet & Tankers",
-  "Heavy Equipment",
-  "Water Supply",
+  "Heavy Vehicles",
+  "Bulk Water Supply",
   "Salt Operations",
-  "Team & Operations",
-  "Industrial Activities",
 ] as const;
 
 function GalleryPage() {
@@ -114,18 +222,16 @@ function GalleryPage() {
   const [activeImage, setActiveImage] = useState<GalleryItem | null>(null);
   const headerVisible = useHeaderVisible();
 
-  const filteredItems = activeCategory === "All" 
-    ? galleryData 
-    : galleryData.filter((item) => item.category === activeCategory);
+  const filteredItems =
+    activeCategory === "All"
+      ? galleryData
+      : galleryData.filter((item) => item.category === activeCategory);
 
   return (
     <>
-      <PageIntro
-        label="Gallery"
-        title="Our Operations in Action"
-      >
+      <PageIntro label="Gallery" title="Our Operations in Action">
         <p>
-          Explore Mira Group's fleet, infrastructure, equipment, tanker operations, water supply activities and salt operations.
+          Explore Mira Group's fleet, infrastructure, heavy equipment, water supply activities, and salt operations.
         </p>
         <p>
           Decades of operational experience captured across key industrial hubs in Kandla, Mundra, Gandhidham, and Adesar.
@@ -158,23 +264,19 @@ function GalleryPage() {
       {/* Editorial Showcase Grid */}
       <section className="border-b border-border py-16 lg:py-24">
         <div className="shell">
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {filteredItems.map((item, idx) => (
-              <Reveal key={item.id} delay={idx * 0.06}>
+              <Reveal key={item.id} delay={idx * 0.05}>
                 <div
                   onClick={() => setActiveImage(item)}
-                  className="group cursor-pointer border border-border bg-card transition-all duration-500 hover:border-primary"
+                  className="group cursor-pointer overflow-hidden border border-border bg-card transition-all duration-500 hover:border-primary aspect-4/3 relative"
                 >
-                  <div className="relative overflow-hidden aspect-4/3">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="h-full w-full object-cover grayscale-[0.2] transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
-                    />
-                    <div className="absolute top-4 left-4 border border-ink-border bg-ink/80 px-3 py-1 text-[0.65rem] label-tech text-ink-foreground backdrop-blur-sm">
-                      {item.category}
-                    </div>
-                  </div>
+                  <img
+                    src={item.image}
+                    alt="Gallery item"
+                    loading="lazy"
+                    className="h-full w-full object-cover grayscale-[0.15] transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+                  />
                 </div>
               </Reveal>
             ))}
@@ -189,28 +291,21 @@ function GalleryPage() {
           onClick={() => setActiveImage(null)}
         >
           <div
-            className="relative max-w-4xl border border-ink-border bg-ink text-ink-foreground p-6 sm:p-8"
+            className="relative max-w-5xl w-full border border-ink-border bg-ink p-4 sm:p-6"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setActiveImage(null)}
-              className="absolute top-4 right-4 text-ink-foreground/60 hover:text-primary label-tech text-xs"
+              className="absolute top-4 right-4 text-ink-foreground/80 hover:text-primary label-tech text-xs cursor-pointer z-10 bg-black/60 px-3 py-1 border border-ink-border backdrop-blur-sm"
             >
               CLOSE [ESC]
             </button>
-            <div className="aspect-video w-full overflow-hidden border border-ink-border">
+            <div className="aspect-video w-full overflow-hidden border border-ink-border bg-black/40 flex items-center justify-center">
               <img
                 src={activeImage.image}
-                alt={activeImage.title}
-                className="h-full w-full object-cover"
+                alt="Expanded operational photo"
+                className="max-h-[80vh] w-full object-contain"
               />
-            </div>
-            <div className="mt-6 flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 border-t border-ink-border pt-4">
-              <div>
-                <span className="label-tech text-primary">{activeImage.category} — {activeImage.location}</span>
-                <h3 className="mt-1 font-display text-2xl">{activeImage.title}</h3>
-                <p className="mt-2 text-sm text-ink-foreground/70">{activeImage.caption}</p>
-              </div>
             </div>
           </div>
         </div>
@@ -235,3 +330,4 @@ function GalleryPage() {
     </>
   );
 }
+

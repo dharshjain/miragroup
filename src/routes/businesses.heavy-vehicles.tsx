@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { StrengthBand, VerticalCta, VerticalHero } from "@/components/vertical-page";
-import equipment from "@/assets/equipment.jpg";
 
 export const Route = createFileRoute("/businesses/heavy-vehicles")({
   head: () => ({
@@ -28,7 +27,7 @@ function HeavyPage() {
         index="03"
         entity="Mira Heavy Vehicles"
         title="Heavy Excavator Equipment Solutions"
-        image={equipment}
+        image="/Heavy vehicles/IMAG0149.jpg"
       >
         <p>
           Industrial site operations require dependable heavy equipment for excavation, earthmoving, land clearing, and material movement.
