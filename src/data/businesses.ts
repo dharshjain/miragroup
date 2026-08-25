@@ -27,7 +27,7 @@ export const verticals: Vertical[] = [
     headline: "Reliable Water for Industrial & Commercial Needs",
     summary:
       "Raw Water, RO Water, DM Water and Bulk Water Supply delivered with a focus on reliability, quality and timely delivery.",
-    image: water,
+    image: "/bulk Water supply/513e5d92-238f-476d-8763-5a7157d1852b.jpg",
     cta: "Explore Water Solutions",
     specs: ["Raw Water", "RO Water", "DM Water", "Bulk Water Supply"],
   },
@@ -40,7 +40,7 @@ export const verticals: Vertical[] = [
     headline: "Safe Movement of Specialized Liquid Cargo",
     summary:
       "Specialized transportation for acids, chemicals and liquid cargo through ACN, SS, coated and ISO tanker capabilities, supported by experienced operations and safety-focused practices.",
-    image: tankers,
+    image: "/Fleet and tanker/DSC00282.JPG",
     cta: "Explore Tanker Solutions",
     specs: ["ACN Tankers", "SS Tankers", "Rubber-Lined / Coated", "ISO Tanks"],
   },
@@ -66,7 +66,7 @@ export const verticals: Vertical[] = [
     headline: "Dedicated Transportation for Liquid Oils",
     summary:
       "Reliable tanker transportation for edible and non-edible oils, with a focus on safe handling, product integrity and timely delivery.",
-    image: oil,
+    image: "/Fleet and tanker/DSC00282.JPG",
     cta: "Explore Oil Transportation",
     specs: ["Edible Oils", "Non-Edible Oils", "Dedicated Tankers", "Contracted Capacity"],
   },

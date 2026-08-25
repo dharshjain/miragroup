@@ -172,7 +172,7 @@ function Home() {
                   src={v.image}
                   alt={v.name}
                   className="aspect-4/3 w-full"
-                  imgClassName="grayscale-[0.35] transition-all duration-700 hover:grayscale-0 hover:scale-[1.02]"
+                  imgClassName="transition-all duration-700 hover:scale-[1.02]"
                 />
               </div>
               <div className="lg:col-span-5 lg:[direction:ltr]">

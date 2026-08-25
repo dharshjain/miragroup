@@ -1,5 +1,5 @@
-import { motion, useScroll, useTransform } from "motion/react";
-import { useRef, type ReactNode } from "react";
+import { motion } from "motion/react";
+import { type ReactNode } from "react";
 
 export function Reveal({
   children,
@@ -29,7 +29,6 @@ export function RevealImage({
   alt,
   className,
   imgClassName,
-  parallax = true,
   priority = false,
 }: {
   src: string;
@@ -39,22 +38,17 @@ export function RevealImage({
   parallax?: boolean;
   priority?: boolean;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], parallax ? ["-6%", "6%"] : ["0%", "0%"]);
-
   return (
-    <div ref={ref} className={`relative overflow-hidden ${className ?? ""}`}>
+    <div className={`relative overflow-hidden ${className ?? ""}`}>
       <motion.img
         src={src}
         alt={alt}
         loading={priority ? "eager" : "lazy"}
-        style={{ y }}
-        className={`h-[112%] w-full -translate-y-[6%] object-cover ${imgClassName ?? ""}`}
-        initial={{ scale: 1.12 }}
+        className={`h-full w-full object-cover ${imgClassName ?? ""}`}
+        initial={{ scale: 1.05 }}
         whileInView={{ scale: 1 }}
         viewport={{ once: true, margin: "-60px" }}
-        transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
       />
       <motion.span
         aria-hidden

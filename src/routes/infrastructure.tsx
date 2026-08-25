@@ -1,12 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageIntro } from "@/components/page-intro";
 import { Reveal, RevealImage } from "@/components/motion-primitives";
-import { Truck } from "lucide-react";
-import infra from "@/assets/infrastructure.jpg";
-import tankers from "@/assets/tankers.jpg";
-import equipment from "@/assets/equipment.jpg";
-import water from "@/assets/water.jpg";
-import salt from "@/assets/salt.jpg";
 
 export const Route = createFileRoute("/infrastructure")({
   head: () => ({
@@ -34,7 +28,7 @@ const infrastructurePillars = [
     title: "Specialized Tanker Fleet",
     tag: "LOGISTICS & LIQUID CARGO",
     desc: "Different tanker configurations support diverse chemical and liquid cargo requirements across India. ACN, SS, rubber-lined/coated, and ISO tanks.",
-    image: tankers,
+    image: "/Fleet and tanker/DSC00096.JPG",
     specs: ["ACN Tankers", "SS Tankers", "Coated Tankers", "ISO Tanks"],
   },
   {
@@ -42,7 +36,7 @@ const infrastructurePillars = [
     title: "Heavy Excavator Equipment",
     tag: "EARTHMOVING & SITE OPERATIONS",
     desc: "Heavy excavators supporting earthmoving, land clearing, salt field development, and heavy industrial project requirements.",
-    image: equipment,
+    image: "/Heavy vehicles/20150827_125116.jpg",
     specs: ["Heavy Excavators", "Earthmoving Excavators", "Site Excavator Operations"],
   },
   {
@@ -50,7 +44,7 @@ const infrastructurePillars = [
     title: "In-House Maintenance Facilities",
     tag: "FLEET UPTIME & HYGIENE",
     desc: "In-house technical workshop and dedicated tanker washing center ensuring fleet reliability, zero breakdown risk, and clean cargo handling.",
-    image: infra,
+    image: "/Fleet and tanker/DSC_0155.JPG",
     specs: ["In-House Workshop", "Tanker Washing Center", "Preventive Servicing", "Zero Contamination"],
   },
   {
@@ -58,7 +52,7 @@ const infrastructurePillars = [
     title: "Water Supply Infrastructure",
     tag: "PURIFICATION & BULK SUPPLY",
     desc: "Dedicated processing and transport capabilities supporting four distinct categories: Raw Water, RO Water, DM Water, and Bulk Water Supply.",
-    image: water,
+    image: "/bulk Water supply/IMG00297-20120116-1048.jpg",
     specs: ["Raw Water Supply", "RO Filtration", "Demineralized Water", "Bulk Water Supply"],
   },
   {
@@ -66,7 +60,7 @@ const infrastructurePillars = [
     title: "Kutch Salt Operations",
     tag: "MANUFACTURING & REFINING",
     desc: "Kutch-based salt manufacturing and processing operations producing raw salt from dedicated seawater salt pans.",
-    image: salt,
+    image: "/Salt/20151208_095108.jpg",
     specs: ["Dedicated Salt Pans", "Seawater Evaporation", "Bulk Industrial Supply"],
   },
 ];
@@ -90,7 +84,7 @@ function InfrastructurePage() {
 
       {/* Main Full-Width Visual Banner */}
       <RevealImage
-        src={infra}
+        src="/Fleet and tanker/DSC00082.JPG"
         alt="Mira Group industrial port and logistics infrastructure"
         className="h-[60vh] w-full"
         priority
@@ -148,7 +142,7 @@ function InfrastructurePage() {
                   src={p.image}
                   alt={p.title}
                   className="aspect-4/3 w-full"
-                  imgClassName="grayscale-[0.3] transition-all duration-700 hover:grayscale-0 hover:scale-[1.02]"
+                  imgClassName="transition-all duration-700 hover:scale-[1.02]"
                 />
               </div>
               <div className="lg:col-span-5 lg:[direction:ltr]">

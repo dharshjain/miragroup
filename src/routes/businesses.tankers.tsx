@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { DetailList, StrengthBand, VerticalCta, VerticalHero } from "@/components/vertical-page";
-import tankers from "@/assets/tankers.jpg";
 
 export const Route = createFileRoute("/businesses/tankers")({
   head: () => ({
@@ -28,7 +27,7 @@ function TankerPage() {
         index="02"
         entity="Mira Logistics"
         title="Safe Movement of Specialized Liquid Cargo"
-        image={tankers}
+        image="/Fleet and tanker/DSC00282.JPG"
       >
         <p>
           Transportation of acids and chemicals requires specialized vehicles, trained personnel and

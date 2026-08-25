@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { DetailList, StrengthBand, VerticalCta, VerticalHero } from "@/components/vertical-page";
-import water from "@/assets/water.jpg";
 
 export const Route = createFileRoute("/businesses/water")({
   head: () => ({
@@ -28,7 +27,7 @@ function WaterPage() {
         index="01"
         entity="Mira Enterprises"
         title="Complete Water Supply Solutions"
-        image={water}
+        image="/bulk Water supply/513e5d92-238f-476d-8763-5a7157d1852b.jpg"
       >
         <p>
           Mira Enterprises provides water supply solutions for industrial and commercial

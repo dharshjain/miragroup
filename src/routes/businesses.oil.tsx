@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { StrengthBand, VerticalCta, VerticalHero } from "@/components/vertical-page";
-import oil from "@/assets/oil.jpg";
 
 export const Route = createFileRoute("/businesses/oil")({
   head: () => ({
@@ -28,7 +27,7 @@ function OilPage() {
         index="04"
         entity="Mira Edible Oil Transport"
         title="Reliable Transportation for Edible & Non-Edible Oils"
-        image={oil}
+        image="/Fleet and tanker/DSC00282.JPG"
       >
         <p>
           Mira Group provides specialized transportation services for edible and non-edible oils

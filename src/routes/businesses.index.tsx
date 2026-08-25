@@ -52,7 +52,7 @@ function BusinessesIndex() {
                   alt={v.name}
                   className="aspect-video w-full"
                   parallax={false}
-                  imgClassName="grayscale-[0.4] transition-all duration-700 group-hover:grayscale-0"
+                  imgClassName="transition-all duration-700"
                 />
               </div>
               <span className="label-tech text-primary lg:col-span-1 lg:text-right">→</span>
